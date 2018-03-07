@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.itcast.jk.domain">
+	<!-- 配置类的映射 -->
+	<class name="ShippingOrder" table="SHIPPING_ORDER_C">
+		<!-- 1.配置主键生成策略 -->
+		<id name="id" column="SHIPPING_ORDER_ID" >
+			<generator class="assigned"/>
+		</id>
+		
+		<!-- 2.配置其他属性 -->
+		<property name="orderType" column="ORDER_TYPE" />
+		<property name="shipper" column="SHIPPER" />
+		<property name="consignee" column="CONSIGNEE" />
+		<property name="notifyParty" column="NOTIFY_PARTY" />
+		<property name="lcNo" column="LC_NO" />
+		<property name="portOfLoading" column="PORT_OF_LOADING" />
+		<property name="portOfTrans" column="PORT_OF_TRANS" />
+		<property name="portOfDischarge" column="PORT_OF_DISCHARGE" />
+		<property name="loadingDate" column="LOADING_DATE" />
+		<property name="limitDate" column="LIMIT_DATE" />
+		<property name="isBatch" column="IS_BATCH" />
+		<property name="isTrans" column="IS_TRANS" />
+		<property name="copyNum" column="COPY_NUM" />
+		<property name="remark" column="REMARK" />
+		<property name="specialCondition" column="SPECIAL_CONDITION" />
+		<property name="freight" column="FREIGHT" />
+		<property name="checkBy" column="CHECK_BY" />
+		<property name="state" column="STATE" />
+		<property name="createBy" column="CREATE_BY" />
+		<property name="createDept" column="CREATE_DEPT" />
+		<property name="createTime" column="CREATE_TIME" />
+
+		
+		<!-- 3.配置对象关联关系；父部门：一个部门下有多个子部门；自关联 -->
+		
+	</class>
+
+</hibernate-mapping>
